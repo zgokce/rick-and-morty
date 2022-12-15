@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import "variables.scss";
+
+body {
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 18px;
+}
+h3 {
+  font-size: 16px;
+}
+h4 {
+  font-size: 13px;
+}
+
+::-moz-selection { /* Code for Firefox */
+  background: theme('colors.pink');
+  color: white;
+}
+
+::selection {
+  background: $green;
+  color: white;
+}

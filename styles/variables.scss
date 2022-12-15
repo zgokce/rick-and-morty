@@ -1,0 +1,45 @@
+// COLORS
+
+$brown: #44281D;
+$cream: #E4A788;
+$yellow: #EFE04B;
+$green: #98CD4D;
+$pink: #E899C7;
+$red: #B90000;
+$burgundy: #44281D;
+$blue: #69C8ECFF;
+$gray: #B8B8B8;
+$gray-100: rgba(184, 184, 184, 0.05);
+$gray-300: rgba(184, 184, 184, 0.2);
+$gray-500: rgba(184, 184, 184, 0.25);
+$gray-700: rgba(184, 184, 184, 0.5);
+$gray-900: #818181;
+$red-100: rgba(185, 0, 0, 0.05);
+$red-300: rgba(185, 0, 0, 0.2);
+$red-500: rgba(185, 0, 0, 0.25);
+$red-700: rgba(185, 0, 0, 0.5);
+$green-100: rgba(152, 205, 77, 0.05);
+$green-300: rgba(152, 205, 77, 0.2);
+$green-500: rgba(152, 205, 77, 0.25);
+$green-700: rgba(152, 205, 77, 0.5);
+
+@mixin devices ($breakpoint) {
+
+  @if $breakpoint == smallDesktop {
+    @media only screen and (max-width: 1280px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 640px) {
+      @content;
+    }
+  }
+}
