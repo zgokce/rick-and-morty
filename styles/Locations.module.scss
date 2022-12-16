@@ -1,0 +1,13 @@
+@import 'variables';
+
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+
+  > div {
+    width: 33.33%;
+    @include devices(tablet) {
+      width: 100%;
+    }
+  }
+}
