@@ -12,6 +12,7 @@ import { ADD_FILTER } from '../store/filters'
 import ICharacterResponse from '../interfaces/character-response.interface'
 import CharacterBox from '../components/character-box'
 import Pagination from '../components/pagination'
+import CharacterBoxLoader from '../components/character-box-loader'
 
 const Characters = () => {
 	const router = useRouter()
@@ -47,12 +48,9 @@ const Characters = () => {
 			} else {
 				tmpCharacters = charactersDataByLocation
 			}
-			console.log('-->', tmpCharacters)
 			setCharacters(tmpCharacters)
 
 			setTotalPageCount(Math.ceil(tmpCharacters.length / perPage))
-			console.log('page count:', Math.ceil(tmpCharacters.length / perPage))
-			console.log('character count:', tmpCharacters.length)
 		}
 	}, [router.isReady, filters])
 
@@ -102,7 +100,18 @@ const Characters = () => {
 				</div>
 			</div>
 			{loading ? (
-				<div>loading</div>
+				<div className={styles.charactersContainer}>
+					{[...Array(20)].map((data, d) => {
+						return (
+							<div
+								key={`character-box-loader-${d.toString()}`}
+								className={styles.characterBoxWrapper}
+							>
+								<CharacterBoxLoader />
+							</div>
+						)
+					})}
+				</div>
 			) : (
 				<div>
 					<div className={styles.charactersContainer}>
