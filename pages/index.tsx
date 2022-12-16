@@ -23,11 +23,11 @@ export default function Home() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.portalWrapper}>
-				<Image src={GifPortal} alt='portal' />
+				<Image src={GifPortal} alt='portal' loading='lazy' />
 				<button onClick={() => router.push('/locations')}>LOCATIONS</button>
 			</div>
 			<div className={styles.imageWrapper}>
-				<Image src={ImageBanner} alt='banner' />
+				<Image src={ImageBanner} alt='banner' loading='lazy' />
 			</div>
 		</div>
 	)

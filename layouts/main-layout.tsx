@@ -18,10 +18,15 @@ const MainLayout = ({ children }: MainLayoutProps) => {
 			<div className={styles.header}>
 				<div>
 					<Link href='/'>
-						<Image src={Logo} alt='logo' width={210} />
+						<Image src={Logo} alt='logo' width={210} loading='lazy' />
 					</Link>
 					<div onClick={() => router.back()}>
-						<Image src={IconArrowLeft} alt='arrow-left' width={36} />
+						<Image
+							src={IconArrowLeft}
+							alt='arrow-left'
+							width={36}
+							loading='lazy'
+						/>
 					</div>
 				</div>
 			</div>

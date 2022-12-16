@@ -40,7 +40,7 @@ const OtherCharacterBox = ({
 					})
 				}
 			>
-				<Image src={image} alt={name} width={90} height={90} />
+				<Image src={image} alt={name} width={90} height={90} loading='lazy' />
 			</div>
 			<div className={styles.textWrapper}>
 				<h2

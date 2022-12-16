@@ -51,7 +51,7 @@ const CharacterBox = ({
 			}
 		>
 			<div className={styles.imageWrapper}>
-				<Image src={image} alt={name} width={336} height={336} />
+				<Image src={image} alt={name} width={336} height={336} loading='lazy' />
 			</div>
 			<h1>{matches ? truncateString(name) : name}</h1>
 			<div className={styles.statusWrapper}>
