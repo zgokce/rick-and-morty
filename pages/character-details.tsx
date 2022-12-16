@@ -8,6 +8,8 @@ import { RootState } from '../store'
 import ICharacterResponse from '../interfaces/character-response.interface'
 import CharacterBox from '../components/character-box'
 import OtherCharacterBox from '../components/other-character-box'
+import OtherCharacterBoxLoader from '../components/other-character-box-loader'
+import CharacterBoxLoader from '../components/character-box-loader'
 
 const CharacterDetails = () => {
 	const router = useRouter()
@@ -57,7 +59,23 @@ const CharacterDetails = () => {
 	return (
 		<MainLayout>
 			{!router.isReady || characterIsLoading ? (
-				<div>loading</div>
+				<div className={styles.container}>
+					<div className={styles.characterBoxWrapper}>
+						<CharacterBoxLoader />
+					</div>
+					<div className={styles.otherCharactersWrapper}>
+						<h1>Other Characters</h1>
+						<div className={styles.otherCharacters}>
+							{[...Array(20)].map((character, c) => {
+								return (
+									<OtherCharacterBoxLoader
+										key={`other-character-box-loader-${c.toString()}`}
+									/>
+								)
+							})}
+						</div>
+					</div>
+				</div>
 			) : (
 				<div className={styles.container}>
 					<div className={styles.characterBoxWrapper}>
