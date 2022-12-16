@@ -1,0 +1,28 @@
+.container {
+
+}
+.header {
+  padding: 30px 24px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(17, 176, 200, 0.11);
+
+  div:first-child {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > div {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left:0;
+      transform: translateY(-50%);
+    }
+  }
+
+}
+.childrenWrapper {
+  padding-right: 24px;
+  padding-left: 24px;
+}
