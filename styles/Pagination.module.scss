@@ -1,0 +1,30 @@
+@import "variables";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0;
+  > div, button {
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    background-color: white;
+    border: none;
+  }
+
+  > button {
+    margin: 0 12px;
+  }
+}
+
+.activePage {
+  background-color: $blue !important;
+  color: white;
+}
