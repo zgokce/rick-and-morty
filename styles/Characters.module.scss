@@ -8,10 +8,24 @@
   div:first-child {
     margin-top: -5px;
   }
+
+  @include devices(mobile) {
+    margin-right: -24px;
+  }
 }
 .filterButtons {
   display: flex;
+  position: relative;
   margin-bottom:41px;
+  width: 100%;
+  min-width: 100%;
+  overflow: auto;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+
   button {
     cursor:pointer;
     margin-right:12px;
