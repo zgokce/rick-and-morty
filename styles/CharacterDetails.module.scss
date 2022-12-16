@@ -1,0 +1,30 @@
+@import "variables";
+.container {
+  display: flex;
+  margin-bottom: 16px;
+  @include devices(tablet) {
+    display: block;
+  }
+}
+.characterBoxWrapper {
+  width: 35%;
+  @include devices(tablet) {
+    width: 100%;
+  }
+}
+.otherCharactersWrapper {
+  padding-left: 48px;
+  width: 65%;
+  @include devices(tablet) {
+    width: 100%;
+    padding-left: 12px;
+  }
+
+  h1 {
+    margin-bottom: 21px;
+  }
+}
+.otherCharacters {
+  display: flex;
+  flex-wrap: wrap;
+}
