@@ -23,7 +23,6 @@ const OtherCharacterBox = ({
 	type,
 	gender,
 }: OtherCharacterBoxProps) => {
-	//TODO: character-detail link
 	const router = useRouter()
 	return (
 		<div className={styles.container}>
